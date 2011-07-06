@@ -1,0 +1,365 @@
+
+Segmentation fault Mon Jul  4 11:30:39 2011
+
+
+C stack backtrace:
+/home/jurre/smalltalk/Seaside.app/Contents/Linux/squeak[0x805ad29]
+/home/jurre/smalltalk/Seaside.app/Contents/Linux/squeak[0x805ae9c]
+[0x53c40c]
+/home/jurre/smalltalk/Seaside.app/Contents/Linux/squeak[0x80809e7]
+/home/jurre/smalltalk/Seaside.app/Contents/Linux/squeak[0x8080fc4]
+/home/jurre/smalltalk/Seaside.app/Contents/Linux/squeak(main+0x36a)[0x805bf0a]
+/lib/libc.so.6(__libc_start_main+0xe7)[0x276ce7]
+/home/jurre/smalltalk/Seaside.app/Contents/Linux/squeak[0x805a131]
+
+
+Smalltalk stack dump:
+0xbfc491bc I GRUnboundDelayedSend>valueWithArguments: 2041237516: a(n) GRUnboundDelayedSend
+2041341184 s GRUnboundDelayedSend>valueWithPossibleArguments:
+0xbfc3f020 I WAActionCallback>evaluateWithArgument: 2041351564: a(n) WAActionCallback
+0xbfc3f044 I WAActionCallback(WACallback)>evaluateWithFieldValues: 2041351564: a(n) WAActionCallback
+0xbfc3f064 M [] in WACallbackRegistry>handle: 2041350880: a(n) WACallbackRegistry
+0xbfc3f088 M Array(SequenceableCollection)>do: 2041417984: a(n) Array
+0xbfc3f0ac M WACallbackRegistry>handle: 2041350880: a(n) WACallbackRegistry
+0xbfc3f0c8 M [] in WAActionPhaseContinuation>runCallbacks 2041350828: a(n) WAActionPhaseContinuation
+0xbfc3f0e4 M BlockClosure>on:do: 2041417428: a(n) BlockClosure
+0xbfc3f104 M WAActionPhaseContinuation(WARenderLoopContinuation)>withNotificationHandlerDo: 2041350828: a(n) WAActionPhaseContinuation
+0xbfc3f120 M [] in WAActionPhaseContinuation>runCallbacks 2041350828: a(n) WAActionPhaseContinuation
+0xbfc3f140 M BlockClosure>ensure: 2041417212: a(n) BlockClosure
+0xbfc3f15c M WAActionPhaseContinuation>runCallbacks 2041350828: a(n) WAActionPhaseContinuation
+0xbfc3f17c I WAActionPhaseContinuation>handleRequest 2041350828: a(n) WAActionPhaseContinuation
+0xbfc3f19c I [] in WAActionPhaseContinuation(WASessionContinuation)>basicValue 2041350828: a(n) WAActionPhaseContinuation
+0xbfc3f1b8 M BlockClosure>on:do: 2041416996: a(n) BlockClosure
+0xbfc368a4 M WAActionPhaseContinuation(WASessionContinuation)>withUnregisteredHandlerDo: 2041350828: a(n) WAActionPhaseContinuation
+0xbfc368c8 I WAActionPhaseContinuation(WASessionContinuation)>basicValue 2041350828: a(n) WAActionPhaseContinuation
+0xbfc368e0 M WAActionPhaseContinuation(WASessionContinuation)>value 2041350828: a(n) WAActionPhaseContinuation
+0xbfc36900 M FOSession(WASession)>handleFiltered: 2041007672: a(n) FOSession
+0xbfc3691c M WATimingToolFilter(WARequestFilter)>handleFiltered: 2041010096: a(n) WATimingToolFilter
+0xbfc3693c M [] in WATimingToolFilter>handleFiltered: 2041010096: a(n) WATimingToolFilter
+0xbfc3695c M BlockClosure>ensure: 2041416656: a(n) BlockClosure
+0xbfc36978 M WATimingToolFilter>handleFiltered: 2041010096: a(n) WATimingToolFilter
+0xbfc36994 M WADeprecatedToolFilter(WARequestFilter)>handleFiltered: 2041009936: a(n) WADeprecatedToolFilter
+0xbfc369b4 M [] in WADeprecatedToolFilter>handleFiltered: 2041009936: a(n) WADeprecatedToolFilter
+0xbfc369d0 M BlockClosure>on:do: 2041416528: a(n) BlockClosure
+0xbfc369f0 M WADeprecatedToolFilter>handleFiltered: 2041009936: a(n) WADeprecatedToolFilter
+0xbfc36a0c M WAMutualExclusionFilter(WARequestFilter)>handleFiltered: 2041007728: a(n) WAMutualExclusionFilter
+0xbfc36a2c M [] in WAMutualExclusionFilter>handleFiltered: 2041007728: a(n) WAMutualExclusionFilter
+0xbfc36a4c M BlockClosure>ensure: 2041416044: a(n) BlockClosure
+0xbfc36a70 M [] in WAMutex>critical: 2041007756: a(n) WAMutex
+0xbfc36a90 M [] in Semaphore>critical: 2041007772: a(n) Semaphore
+0xbfc36ab0 M BlockClosure>ensure: 2041416284: a(n) BlockClosure
+0xbfc36ad0 M Semaphore>critical: 2041007772: a(n) Semaphore
+0xbfc36af0 M WAMutex>critical: 2041007756: a(n) WAMutex
+0xbfc36b0c M WAMutualExclusionFilter>handleFiltered: 2041007728: a(n) WAMutualExclusionFilter
+0xbfc36b2c M [] in FOSession(WARequestHandler)>handle: 2041007672: a(n) FOSession
+0xbfc36b48 M BlockClosure>on:do: 2041415692: a(n) BlockClosure
+0xbfc36b68 M WACurrentRequestContext class(WADynamicVariable class)>use:during: 2020875712: a(n) WACurrentRequestContext class
+0xbfc36b8c M [] in WARequestContext>push:while: 2041414080: a(n) WARequestContext
+0xbfc36bac M BlockClosure>ensure: 2041415804: a(n) BlockClosure
+0xbfc36bc8 M WARequestContext>push:while: 2041414080: a(n) WARequestContext
+0xbfc36be8 M FOSession(WARequestHandler)>handle: 2041007672: a(n) FOSession
+0xbfc36c0c I WAApplication(WARegistry)>dispatch:to: 2027753900: a(n) WAApplication
+0xbfc36c2c M WAApplication(WARegistry)>handleKeyed:with: 2027753900: a(n) WAApplication
+0xbfc36c5c M WAApplication(WARegistry)>handleFiltered: 2027753900: a(n) WAApplication
+0xbfc36c78 M WAApplication>handleFiltered: 2027753900: a(n) WAApplication
+0xbfc36c94 M WAExceptionFilter(WARequestFilter)>handleFiltered: 2027754912: a(n) WAExceptionFilter
+0xbfc36cb4 M [] in WAExceptionFilter>handleFiltered: 2027754912: a(n) WAExceptionFilter
+0xbfc36cd0 M BlockClosure>on:do: 2041415360: a(n) BlockClosure
+0xbfc36cf0 M WAWalkbackErrorHandler(WAExceptionHandler)>handleExceptionsDuring: 2041415384: a(n) WAWalkbackErrorHandler
+0xbfc36d14 I WAWalkbackErrorHandler class(WAExceptionHandler class)>handleExceptionsDuring:context: 2022192256: a(n) WAWalkbackErrorHandler class
+0xbfc36d34 M WAExceptionFilter>handleFiltered: 2027754912: a(n) WAExceptionFilter
+0xbfc36d54 M [] in WAApplication(WARequestHandler)>handle: 2027753900: a(n) WAApplication
+0xbfc36d70 M BlockClosure>on:do: 2041415008: a(n) BlockClosure
+0xbfc36d90 M WACurrentRequestContext class(WADynamicVariable class)>use:during: 2020875712: a(n) WACurrentRequestContext class
+0xbfc36db4 M [] in WARequestContext>push:while: 2041414080: a(n) WARequestContext
+0xbfc36dd4 M BlockClosure>ensure: 2041415120: a(n) BlockClosure
+0xbfc36df0 M WARequestContext>push:while: 2041414080: a(n) WARequestContext
+0xbfc36e10 M WAApplication(WARequestHandler)>handle: 2027753900: a(n) WAApplication
+0xbfc36e2c M WADispatcher>handleFiltered:named: 2021889636: a(n) WADispatcher
+0xbfc36e50 M WADispatcher>handleFiltered: 2021889636: a(n) WADispatcher
+0xbfc36e70 M [] in WADispatcher(WARequestHandler)>handle: 2021889636: a(n) WADispatcher
+0xbfc36e8c M BlockClosure>on:do: 2041414564: a(n) BlockClosure
+0xbfc36eac M WACurrentRequestContext class(WADynamicVariable class)>use:during: 2020875712: a(n) WACurrentRequestContext class
+0xbfc36ed0 M [] in WARequestContext>push:while: 2041414080: a(n) WARequestContext
+0xbfc36ef0 M BlockClosure>ensure: 2041414676: a(n) BlockClosure
+0xbfc36f0c M WARequestContext>push:while: 2041414080: a(n) WARequestContext
+0xbfc36f2c M WADispatcher(WARequestHandler)>handle: 2021889636: a(n) WADispatcher
+0xbfc36f4c M [] in WAComancheAdaptor(WAServerAdaptor)>handleRequest: 2025920496: a(n) WAComancheAdaptor
+0xbfc36f68 M BlockClosure>on:do: 2041414436: a(n) BlockClosure
+0xbfc36f88 M WAComancheAdaptor(WAServerAdaptor)>handleRequest: 2025920496: a(n) WAComancheAdaptor
+0xbfc36fa4 M WAComancheAdaptor(WAServerAdaptor)>handle: 2025920496: a(n) WAComancheAdaptor
+0xbfc36fc8 M [] in WAComancheAdaptor(WAServerAdaptor)>process: 2025920496: a(n) WAComancheAdaptor
+0xbfc36fe8 M BlockClosure>ensure: 2041414304: a(n) BlockClosure
+0xbfc37008 M WAComancheAdaptor(WAServerAdaptor)>process: 2025920496: a(n) WAComancheAdaptor
+0xbfc37024 M WAComancheAdaptor>processHttpRequest: 2025920496: a(n) WAComancheAdaptor
+0xbfc37040 M HttpService>processHttpRequest: 2025920536: a(n) HttpService
+0xbfc37060 M [] in HttpAdaptor>dispatchRequest: 2041391552: a(n) HttpAdaptor
+0xbfc3707c M BlockClosure>on:do: 2041413392: a(n) BlockClosure
+0xbfc3709c M HttpService>handleDispatchErrorsIn: 2025920536: a(n) HttpService
+0xbfc370bc M HttpAdaptor>dispatchRequest: 2041391552: a(n) HttpAdaptor
+0xbfc370e0 M [] in HttpAdaptor>beginConversation 2041391552: a(n) HttpAdaptor
+0xbfc37100 M BlockClosure>ensure: 2041391676: a(n) BlockClosure
+0xbfc37124 M HttpAdaptor>beginConversation 2041391552: a(n) HttpAdaptor
+0xbfc37140 M HttpAdaptor class>readAndWriteTo:service: 2025816012: a(n) HttpAdaptor class
+0xbfc37160 M HttpAdaptor class>readAndWriteToSocket:service: 2025816012: a(n) HttpAdaptor class
+0xbfc37180 M HttpService>serve: 2025920536: a(n) HttpService
+0xbfc371a0 M [] in HttpService(TcpService)>value: 2025920536: a(n) HttpService
+0xbfc371c0 I [] in BlockClosure>newProcess 2041382992: a(n) BlockClosure
+
+Most recent primitives
+@
+@
+@
+basicNew
+@
+@
+@
+@
+species
+species
+@
+@
+@
+perform:with:
+@
+@
+@
+perform:with:
+@
+@
+@
+@
+@
+basicNew
+@
+perform:with:
+@
+@
+perform:with:
+@
+basicNew
+species
+species
+species
+species
+@
+@
+species
+species
+perform:
+@
+@
+perform:with:
+@
+perform:
+@
+@
+perform:with:
+@
+@
+@
+@
+basicNew
+@
+@
+@
+@
+species
+species
+@
+@
+@
+perform:with:
+@
+@
+@
+perform:with:
+@
+@
+@
+@
+@
+basicNew
+@
+perform:with:
+@
+@
+perform:with:
+@
+basicNew
+species
+species
+species
+species
+@
+@
+species
+species
+perform:
+@
+@
+perform:with:
+@
+perform:
+@
+@
+perform:with:
+@
+@
+@
+@
+basicNew
+@
+@
+@
+@
+species
+species
+@
+@
+@
+perform:with:
+@
+@
+@
+perform:with:
+@
+@
+@
+@
+@
+basicNew
+@
+perform:with:
+@
+@
+perform:with:
+@
+basicNew
+species
+species
+species
+species
+@
+@
+species
+species
+perform:
+@
+@
+perform:with:
+@
+perform:
+@
+@
+perform:with:
+@
+@
+@
+@
+basicNew
+@
+@
+@
+@
+species
+species
+@
+@
+@
+@
+perform:with:
+@
+@
+perform:with:
+@
+basicNew
+@
+perform:with:
+@
+@
+perform:with:
+@
+basicNew
+@
+shallowCopy
+@
+@
+basicNew
+@
+@
+basicNew
+@
+@
+basicNew
+@
+@
+basicNew
+@
+@
+basicNew
+@
+@
+basicNew
+@
+@
+perform:with:
+@
+@
+perform:with:
+@
+basicNew
+@
+perform:with:
+@
+@
+perform:with:
+@
+basicNew
+@
+@
+@
+@
+basicNew
+shallowCopy
+shallowCopy
+@
+@
+basicNew
+@
+@
+basicNew
+@
+@
+basicNew
+@
+@
+basicNew
+@
+@
+basicNew
+@
+@
+basicNew
+species
+species
+species
+species
+species
+species
+yield
+millisecondClockValue
+basicNew
+basicNew
+wait
+signal
+millisecondClockValue
+at:put:
+at:put:
+at:put:
+millisecondClockValue
+primSignal:atMilliseconds:
+millisecondClockValue
+wait
+signal
+wait
